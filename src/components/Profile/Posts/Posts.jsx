@@ -8,9 +8,8 @@ function Posts() {
     <section className={s.posts}>
       Posts
       <CreatePost />
-      <Post />
-      <Post />
-      <Post />
+      <Post message="Hey how are you?" likes="50" views="200" />
+      <Post message="It's my first post" likes="100" views="500" />
     </section>
   );
 }

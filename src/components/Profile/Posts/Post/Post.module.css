@@ -5,3 +5,7 @@
     width: 70%;
     margin: 0 auto;
 }
+.myPost span {
+    font-style: italic;
+    font-size: 0.8rem;
+}
