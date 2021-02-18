@@ -6,28 +6,3 @@
   grid-template-columns: 2fr 10fr;
   grid-template-areas: 'header header' 'nav main';
 }
-
-.header {
-  grid-area: header;
-  grid-column: auto / span 2;
-  background-color:lightblue;
-}
-.header img {
-  width: 3rem;
-  object-fit: cover;
-  background-color: lightblue;
-}
-
-.nav {
-  grid-area: nav;
-  background-color: lightyellow;
-}
-.main {
-  grid-area: main;
-  background-color: thistle;
-}
-
-.main img:first-of-type {
-  height: 100px;
-  object-fit: cover;
-}

@@ -1,0 +1,9 @@
+.profile {
+    grid-area: main;
+    background-color: thistle;
+}
+
+.profile img:first-of-type {
+    height: 100px;
+    object-fit: cover;
+}

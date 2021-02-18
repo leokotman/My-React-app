@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import s from "./Header.module.css";
 
 function Header() {
   return (
-    <header className='header'>
-      <img src='https://img.freepik.com/free-vector/gold-lion-leo-shield-logo-icon_23758-201.jpg?size=338&ext=jpg' alt='leo logo'></img>
-        Header    
+    <header className={s.header}>
+      <img
+        src="https://img.freepik.com/free-vector/gold-lion-leo-shield-logo-icon_23758-201.jpg?size=338&ext=jpg"
+        alt="leo logo"
+      ></img>
+      Header
     </header>
   );
 }

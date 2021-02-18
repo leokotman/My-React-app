@@ -1,8 +1,9 @@
 import React, {Component} from "react";
+import s from "./Profile.module.css";
 
 function Profile() {
   return (
-    <main className="main">
+    <main className={s.profile}>
       <img
         src="https://images.all-free-download.com/images/graphicthumb/beautiful_cat_picture_6_168770.jpg"
         alt="cat"
