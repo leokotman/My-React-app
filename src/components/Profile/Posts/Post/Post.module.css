@@ -1,0 +1,11 @@
+.myPost {
+    background-color: #fff;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    width: 70%;
+    margin: 0 auto;
+}
+.myPost span {
+    font-style: italic;
+    font-size: 0.8rem;
+}
