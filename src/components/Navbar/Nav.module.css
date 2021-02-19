@@ -1,4 +1,14 @@
 .nav {
     grid-area: nav;
-    background-color: lightyellow;
-  }
+    background-color: lightskyblue;
+}
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a.activeLink {
+    color: gold;
+    background-color: #fff;
+    border-radius: 10%;
+}

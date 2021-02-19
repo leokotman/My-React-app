@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import s from "./Nav.module.css";
-import Profile from "../Profile/Profile";
-import Messages from "../Messages/Messages";
+import {NavLink} from "react-router-dom";
 
 function Nav() {
   return (
@@ -9,13 +8,17 @@ function Nav() {
       Menu
       <ul>
         <li>
-          <a href="/profile">Profile</a>
+          <NavLink to="/profile" activeClassName={s.activeLink}>
+            
+            Profile
+          
+          </NavLink>
         </li>
         <li>
           <a>News</a>
         </li>
         <li>
-          <a href="/messages">Messages</a>
+          <NavLink to="/messages" activeClassName={s.activeLink}>Messages</NavLink>
         </li>
         <li>Music</li>
         <li>Settings</li>

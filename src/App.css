@@ -1,8 +1,8 @@
 .App {
   display: grid;
-  width: 80vw;
+  width: 80%;
   margin: 0 auto;
-  grid-template-rows: 1fr 10fr;
+  grid-template-rows: 45px 10fr;
   grid-template-columns: 2fr 10fr;
   grid-template-areas: 'header header' 'nav main';
 }
