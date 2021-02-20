@@ -12,17 +12,17 @@ import Settings from './components/Settings/Settings';
 function App(props) {
   return (
     <BrowserRouter>
-        <div className="App">
-          <Header />
-          <Nav />
-          <div>
-            <Route component={Profile} path='/profile' />
-            <Route component={Messages} path='/messages' />
-            <Music/>
-            <News/>
-            <Settings/>
-          </div>
+      <div className="App">
+        <Header />
+        <Nav />
+        <div>
+          <Route component={Profile} path="/profile" />
+          <Route component={Messages} exact path="/messages" />
+          <Route component={Music} path="/music" />
+          <Route component={News} path="/news" />
+          <Route component={Settings} path="/settings" />
         </div>
+      </div>
     </BrowserRouter>
   );
 }
