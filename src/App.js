@@ -1,15 +1,15 @@
 import React, {Component} from "react";
-import {BrowserRouter, Route, Link} from "react-router-dom";
-import './App.css';
+import {BrowserRouter, Route} from "react-router-dom";
+import "./App.css";
 import Header from "./components/Header/Header";
 import Nav from "./components/Navbar/Nav";
 import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
-import Music from './components/Music/Music';
+import Music from "./components/Music/Music";
 import News from "./components/News/News";
-import Settings from './components/Settings/Settings';
+import Settings from "./components/Settings/Settings";
 
-function App(props) {  
+function App(props) {
   return (
     <BrowserRouter>
       <div className="App">
@@ -17,14 +17,12 @@ function App(props) {
         <Nav />
         <div>
           <Route
-            render={() => <Profile posts={props.posts} />}
+            render={() => <Profile state={props.state.profilePage} />}
             exact
             path="/profile"
           />
           <Route
-            render={() => (
-              <Dialogs messages={props.messages} dialogs={props.dialogs} />
-            )}
+            render={() => <Dialogs state={props.state.dialogsPage} />}
             path="/dialogs"
           />
 

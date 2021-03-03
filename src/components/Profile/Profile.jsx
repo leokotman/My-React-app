@@ -8,7 +8,7 @@ function Profile(props) {
     <main className={s.profile}>
       Profile
       <ProfileInfo />
-      <Posts posts={props.posts}  />
+      <Posts posts={props.state.posts} />
     </main>
   );
 }
