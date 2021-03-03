@@ -3,13 +3,16 @@ import s from "./Posts.module.css";
 import Post from "./Post/Post";
 import CreatePost from "./Post/CreatePost";
 
-function Posts() {
+function Posts(props) {
+  let postsElements = props.posts.map((p) => (
+    <Post message={p.message} likes={p.likes} views={p.views} />
+  ));
+
   return (
     <section className={s.posts}>
       Posts
       <CreatePost />
-      <Post message="Hey how are you?" likes="50" views="200" />
-      <Post message="It's my first post" likes="100" views="500" />
+      {postsElements}
     </section>
   );
 }
