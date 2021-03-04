@@ -1,20 +1,39 @@
 import React, {Component} from "react";
-import './App.css';
+import {BrowserRouter, Route} from "react-router-dom";
+import "./App.css";
 import Header from "./components/Header/Header";
 import Nav from "./components/Navbar/Nav";
 import Profile from "./components/Profile/Profile";
-import Messages from "./components/Messages/Messages";
+import Dialogs from "./components/Dialogs/Dialogs";
+import Music from "./components/Music/Music";
+import News from "./components/News/News";
+import Settings from "./components/Settings/Settings";
+import Sidebar from "./components/Sidebar/Sidebar";
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <Header />
-      <Nav />
-      <div>
-        <Profile />
-        <Messages />
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Nav />
+        <Sidebar state={props.state.sidebar} />
+        <div>
+          <Route
+            render={() => <Profile state={props.state.profilePage} />}
+            exact
+            path="/profile"
+          />
+          <Route
+            render={() => <Dialogs state={props.state.dialogsPage} />}
+            path="/dialogs"
+          />
+
+          <Route component={Music} path="/music" />
+          <Route component={News} path="/news" />
+          <Route component={Settings} path="/settings" />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

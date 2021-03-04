@@ -3,16 +3,12 @@ import s from "./Profile.module.css";
 import ProfileInfo from "./Profile_info/ProfileInfo";
 import Posts from "./Posts/Posts";
 
-function Profile() {
+function Profile(props) {
   return (
     <main className={s.profile}>
-      <img
-        src="https://images.all-free-download.com/images/graphicthumb/beautiful_cat_picture_6_168770.jpg"
-        alt="cat"
-      ></img>
       Profile
       <ProfileInfo />
-      <Posts />
+      <Posts posts={props.state.posts} />
     </main>
   );
 }

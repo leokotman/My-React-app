@@ -1,0 +1,14 @@
+.messages {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    padding: 1rem;
+    }
+
+    .dialogs .active {
+        color: gold;
+        border: 1px solid #000;
+    }
+
+    .dialog {
+        border: 1px solid lightblue;
+}
