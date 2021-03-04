@@ -1,0 +1,7 @@
+.sidebar {
+    grid-area: sidebar;
+    background-color: lightblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

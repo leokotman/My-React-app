@@ -8,6 +8,7 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import Music from "./components/Music/Music";
 import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 function App(props) {
   return (
@@ -15,6 +16,7 @@ function App(props) {
       <div className="App">
         <Header />
         <Nav />
+        <Sidebar state={props.state.sidebar} />
         <div>
           <Route
             render={() => <Profile state={props.state.profilePage} />}

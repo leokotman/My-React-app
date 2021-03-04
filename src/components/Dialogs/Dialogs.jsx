@@ -4,7 +4,6 @@ import Dialog from "./Dialog/Dialog";
 import OpenDialog from "./OpenDialog/OpenDialog";
 
 function Dialogs(props) {
-  debugger;
   //из данных делаем разметку с помощью метода .map
   let dialogsElements = props.state.dialogs.map((dialog) => (
     <Dialog name={dialog.name} id={dialog.id} />

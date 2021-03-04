@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 function Nav() {
   return (
     <nav className={s.nav}>
-      Menu
+      <h3>Menu</h3>
       <ul>
         <li>
           <NavLink to="/profile" activeClassName={s.activeLink}>
