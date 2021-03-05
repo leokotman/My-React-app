@@ -1,14 +1,14 @@
 .header {
     grid-area: header;
     grid-column: auto / span 2;
-    background-color: lightblue;
-display: flex;
+    background-color: rgb(161, 226, 248);
+    display: flex;
 }
 
 .header img {
     width: 3rem;
     object-fit: cover;
-    background-color: lightblue;
+    background-color: rgb(161, 226, 248);
 }
 .header span {
     align-self: center;

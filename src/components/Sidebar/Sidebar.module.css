@@ -1,6 +1,6 @@
 .sidebar {
     grid-area: sidebar;
-    background-color: lightblue;
+    background-color: rgba(113, 204, 235, 0.76);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -9,6 +9,7 @@
     display: block;
     text-align: center;
     width: 100%;
+    margin-bottom: 0;
 }
 
 .menu {
@@ -22,5 +23,5 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 }

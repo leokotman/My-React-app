@@ -1,8 +1,7 @@
-import React, {Component} from "react";
+import React from "react";
 import {BrowserRouter, Route} from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
-import Nav from "./components/Sidebar/Navbar/Nav";
 import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
 import Music from "./components/Music/Music";

@@ -1,7 +1,8 @@
-import React, {Component} from "react";
+import React from "react";
 import s from "./Dialogs.module.css";
 import Dialog from "./Dialog/Dialog";
 import OpenDialog from "./OpenDialog/OpenDialog";
+import SendMessage from "./SendMessage/SendMessage";
 
 function Dialogs(props) {
   //из данных делаем разметку с помощью метода .map
@@ -21,6 +22,7 @@ function Dialogs(props) {
       <section className={s.currentDialog}>
         Current dialog
         {messagesElements}
+        <SendMessage />
       </section>
     </div>
   );

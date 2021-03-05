@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import s from "./Sidebar.module.css";
 import Friends from "./Friends/Friends";
 import Nav from "./Navbar/Nav";

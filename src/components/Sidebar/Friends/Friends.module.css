@@ -1,10 +1,14 @@
 .friends {
     border: 1px solid white;
-    border-radius: 1rem;
+    border-radius: 50%;
     background-color: whitesmoke;
-    width: max-content;
+    padding: 0.3rem;
+    margin: 0.3rem;
+    /* width: max-content; */
 }
 
 .friends img {
     display: block;
+    font-style: italic;
+    font-size: small;
 }
