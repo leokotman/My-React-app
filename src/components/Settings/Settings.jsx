@@ -3,7 +3,7 @@ import s from "./Settings.module.css";
 
 function Settings() {
   return (
-    <div>
+    <div className={s.settings}>
       <h3>Settings</h3>
       <div>
         Notifications volume
