@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import s from "./Sidebar.module.css";
 import Friends from "./Friends/Friends";
+import Nav from "./Navbar/Nav";
 
 function Sidebar(props) {
   let friendsElements = props.state.friends.map((friend) => (
@@ -8,8 +9,14 @@ function Sidebar(props) {
   ));
   return (
     <section className={s.sidebar}>
-      <h3>Friends</h3>
-      {friendsElements}
+      <div className={s.menu}>
+        <h3>Menu</h3>
+        <Nav />
+      </div>
+      <div className={s.friends}>
+        <h3>Friends</h3>
+        {friendsElements}
+      </div>
     </section>
   );
 }

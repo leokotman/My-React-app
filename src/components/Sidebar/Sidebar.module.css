@@ -5,3 +5,22 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.sidebar h3 {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.menu {
+    margin: 0;
+    width: 100%;
+}
+
+.friends {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

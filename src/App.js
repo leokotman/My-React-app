@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {BrowserRouter, Route} from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
-import Nav from "./components/Navbar/Nav";
+import Nav from "./components/Sidebar/Navbar/Nav";
 import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
 import Music from "./components/Music/Music";
@@ -15,7 +15,6 @@ function App(props) {
     <BrowserRouter>
       <div className="App">
         <Header />
-        <Nav />
         <Sidebar state={props.state.sidebar} />
         <div>
           <Route

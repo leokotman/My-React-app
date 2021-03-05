@@ -1,8 +1,8 @@
 .friends {
-    margin: 0 auto;
     border: 1px solid white;
     border-radius: 1rem;
     background-color: whitesmoke;
+    width: max-content;
 }
 
 .friends img {
