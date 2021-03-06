@@ -7,3 +7,7 @@
   grid-template-areas: 'header header'
   'sidebar main';
 }
+.Main {
+    padding: 1rem;
+    grid-area: main;
+}

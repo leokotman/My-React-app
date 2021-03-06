@@ -4,7 +4,8 @@ function CreatePost(props) {
   let newPostText = React.createRef();
 
   let addPost = () => {
-    alert(newPostText.current.value);
+    debugger;
+    props.addPost(newPostText.current.value);
   };
 
   return (

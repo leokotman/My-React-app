@@ -1,7 +1,8 @@
-import React, {Component} from "react";
+import React from "react";
 import s from "./Posts.module.css";
 import Post from "./Post/Post";
 import CreatePost from "./Post/CreatePost";
+import {addPost} from "../../../redux/state";
 
 function Posts(props) {
   let postsElements = props.posts.map((p) => (
@@ -11,7 +12,7 @@ function Posts(props) {
   return (
     <section className={s.posts}>
       Posts
-      <CreatePost />
+      <CreatePost addPost={props.addPost} />
       {postsElements}
     </section>
   );

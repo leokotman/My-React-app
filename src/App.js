@@ -15,14 +15,18 @@ function App(props) {
       <div className="App">
         <Header />
         <Sidebar state={props.state.sidebar} />
-        <div>
+        <div className="Main">
           <Route
-            render={() => <Profile state={props.state.profilePage} />}
+            render={() => 
+            <Profile 
+              state={props.state.profilePage} 
+              addPost={props.addPost}/>}
             exact
             path="/profile"
           />
           <Route
-            render={() => <Dialogs state={props.state.dialogsPage} />}
+            render={() => 
+            <Dialogs state={props.state.dialogsPage} />}
             path="/dialogs"
           />
 
