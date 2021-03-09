@@ -1,3 +1,16 @@
-form input {
-    min-height: 2rem;
+.createPost {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    width: max-content;
+    padding: .5rem;
+    border-radius: .3rem;
 }

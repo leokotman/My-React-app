@@ -5,7 +5,6 @@ import App from "./App.js";
 import {addPost} from "./redux/state";
 
 export let rerenderEntireTree = (state) => {
-  debugger;
   ReactDOM.render(
     <React.StrictMode>
       <App state={state} addPost={addPost} />
