@@ -4,30 +4,16 @@ function CreatePost(props) {
   let newPostText = React.createRef();
 
   let addPost = () => {
-    debugger;
-    props.addPost(newPostText.current.value);
+    let text = newPostText.current.value;
+    props.addPost(text);
   };
 
   return (
-    <form action="">
-      <label for="newPost">New post:</label>
-      <input
-      
-         ref={newPostText}
-     
-          id="newPost"
-    
-           type="text"
-  
-             placeholder="Write something"
-
-           />
-      <button onClick={addPost}>
-        
-        Upload
-      
-      </button>
-    </form>
+    <div>
+      <h3>New post:</h3>
+      <textarea ref={newPostText} placeholder="Write something"></textarea>
+      <button onClick={addPost}>Upload</button>
+    </div>
   );
 }
 

@@ -17,16 +17,16 @@ function App(props) {
         <Sidebar state={props.state.sidebar} />
         <div className="Main">
           <Route
-            render={() => 
-            <Profile 
-              state={props.state.profilePage} 
-              addPost={props.addPost}/>}
-            exact
+            render={() => (
+              <Profile
+                state={props.state.profilePage}
+                addPost={props.addPost}
+              />
+            )}
             path="/profile"
           />
           <Route
-            render={() => 
-            <Dialogs state={props.state.dialogsPage} />}
+            render={() => <Dialogs state={props.state.dialogsPage} />}
             path="/dialogs"
           />
 

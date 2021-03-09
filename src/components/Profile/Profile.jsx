@@ -1,8 +1,7 @@
-import React, {Component} from "react";
+import React from "react";
 import s from "./Profile.module.css";
 import ProfileInfo from "./Profile_info/ProfileInfo";
 import Posts from "./Posts/Posts";
-import {addPost} from "../../redux/state";
 
 function Profile(props) {
   return (
