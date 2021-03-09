@@ -8,7 +8,12 @@ function Profile(props) {
     <main className={s.profile}>
       Profile
       <ProfileInfo />
-      <Posts posts={props.state.posts} addPost={props.addPost} />
+      <Posts
+        posts={props.profilePage.posts}
+        newText={props.profilePage.newText}
+        addPost={props.addPost}
+        updateNewPostText={props.updateNewPostText}
+      />
     </main>
   );
 }

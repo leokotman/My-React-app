@@ -11,7 +11,11 @@ function Posts(props) {
   return (
     <section className={s.posts}>
       <h2>Posts</h2>
-      <CreatePost addPost={props.addPost} />
+      <CreatePost
+        addPost={props.addPost}
+        newText={props.newText}
+        updateNewPostText={props.updateNewPostText}
+      />
       {postsElements}
     </section>
   );

@@ -7,6 +7,7 @@ let state = {
       {id: 2, message: "It's my second post", likes: 30, views: 100},
       {id: 3, message: "Yo what's up guys?", likes: 60, views: 300},
     ],
+    newText: "LeoKot",
   },
   dialogsPage: {
     dialogs: [
@@ -33,14 +34,22 @@ let state = {
   },
 };
 
-export let addPost = (postText) => {
+window.state = state;
+
+export let addPost = () => {
   let newPost = {
     id: state.profilePage.posts.length,
-    message: postText,
+    message: state.profilePage.newText,
     likes: 0,
     views: 0,
   };
   state.profilePage.posts.push(newPost);
+  state.profilePage.newText = ''; //обнулили окно ввода теперь здесь в BLL
+  rerenderEntireTree(state);
+};
+
+export let updateNewPostText = (newText) => {
+  state.profilePage.newText = newText;
   rerenderEntireTree(state);
 };
 

@@ -14,19 +14,20 @@ function App(props) {
     <BrowserRouter>
       <div className="App">
         <Header />
-        <Sidebar state={props.state.sidebar} />
+        <Sidebar sidebar={props.state.sidebar} />
         <div className="Main">
           <Route
             render={() => (
               <Profile
-                state={props.state.profilePage}
+                profilePage={props.state.profilePage}
                 addPost={props.addPost}
+                updateNewPostText={props.updateNewPostText}
               />
             )}
             path="/profile"
           />
           <Route
-            render={() => <Dialogs state={props.state.dialogsPage} />}
+            render={() => <Dialogs dialogsPage={props.state.dialogsPage} />}
             path="/dialogs"
           />
 

@@ -4,16 +4,26 @@ import s from "./CreatePost.module.css";
 function CreatePost(props) {
   let newPostText = React.createRef();
 
+  //убрали привязку к окну ввода и берём из state данных
+  // из функции updateNewPostText - newText добавляется
   let addPost = () => {
+    props.addPost();
+  };
+
+  let onChangePostText = () => {
     let text = newPostText.current.value;
-    props.addPost(text);
-    newPostText.current.value = "";
+    props.updateNewPostText(text);
   };
 
   return (
     <div className={s.createPost}>
       <h3>New post:</h3>
-      <textarea ref={newPostText} placeholder="Your new post"></textarea>
+      <textarea
+        ref={newPostText}
+        onChange={onChangePostText}
+        value={props.newText}
+        placeholder="Your new post"
+      />
       <button onClick={addPost}>Upload</button>
     </div>
   );
