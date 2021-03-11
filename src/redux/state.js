@@ -1,4 +1,6 @@
-import {rerenderEntireTree} from "../render";
+let rerenderEntireTree = () => {
+  console.log("state is changed");
+};
 
 let state = {
   profilePage: {
@@ -36,7 +38,7 @@ let state = {
 
 window.state = state;
 
-export let addPost = () => {
+export const addPost = () => {
   let newPost = {
     id: state.profilePage.posts.length,
     message: state.profilePage.newText,
@@ -44,13 +46,17 @@ export let addPost = () => {
     views: 0,
   };
   state.profilePage.posts.push(newPost);
-  state.profilePage.newText = ''; //обнулили окно ввода теперь здесь в BLL
+  state.profilePage.newText = ""; //обнулили окно ввода теперь здесь в BLL
   rerenderEntireTree(state);
 };
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
   state.profilePage.newText = newText;
   rerenderEntireTree(state);
+};
+
+export const subscribe = (observer) => {
+  rerenderEntireTree = observer;
 };
 
 export default state;
