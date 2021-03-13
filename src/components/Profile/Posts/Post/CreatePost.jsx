@@ -7,12 +7,14 @@ function CreatePost(props) {
   //убрали привязку к окну ввода и берём из state данных
   // из функции updateNewPostText - newText добавляется
   let addPost = () => {
-    props.addPost();
+    // props.addPost(); заменяем на
+    props.dispatch({type: "ADD-POST"});
   };
 
   let onChangePostText = () => {
     let text = newPostText.current.value;
-    props.updateNewPostText(text);
+    // props.updateNewPostText(text); заменяем на
+    props.dispatch({type: "UPDATE-NEW-POST-TEXT", newText: text});
   };
 
   return (

@@ -6,7 +6,7 @@ let store = {
         {id: 2, message: "It's my second post", likes: 30, views: 100},
         {id: 3, message: "Yo what's up guys?", likes: 60, views: 300},
       ],
-      newText: "LeoKot",
+      newText: "",
     },
     dialogsPage: {
       dialogs: [
@@ -32,31 +32,34 @@ let store = {
       ],
     },
   },
-  getState () {
-    return this._state;
-  },
-  _rerenderEntireTree () {
+  _rerenderEntireTree() {
     console.log("state is changed");
   },
-  addPost () {
-    let newPost = {
-      id: this._state.profilePage.posts.length,
-      message: this._state.profilePage.newText,
-      likes: 0,
-      views: 0,
-    };
-    this._state.profilePage.posts.push(newPost);
-    this._state.profilePage.newText = ""; //обнулили окно ввода теперь здесь в BLL
-    this._rerenderEntireTree(this._state);
+  getState() {
+    return this._state;
   },
-  updateNewPostText (newText) {
-    this._state.profilePage.newText = newText;
-    this._rerenderEntireTree(this._state);
-  },
-  subscribe (observer) {
+  subscribe(observer) {
     this._rerenderEntireTree = observer;
+  },
+  
+  dispatch(action) {
+    //{type: 'METHOD-NAME'}
+    if (action.type === "ADD-POST") {
+      let newPost = {
+        id: this._state.profilePage.posts.length,
+        message: this._state.profilePage.newText,
+        likes: 0,
+        views: 0,
+      };
+      this._state.profilePage.posts.push(newPost);
+      this._state.profilePage.newText = ""; //обнулили окно ввода теперь здесь в BLL
+      this._rerenderEntireTree(this._state);
+    } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+      this._state.profilePage.newText = action.newText;
+      this._rerenderEntireTree(this._state);
+    }
   }
-}
+};
 
 window.store = store;
 

@@ -12,9 +12,8 @@ function Posts(props) {
     <section className={s.posts}>
       <h2>Posts</h2>
       <CreatePost
-        addPost={props.addPost}
+        dispatch={props.dispatch}
         newText={props.newText}
-        updateNewPostText={props.updateNewPostText}
       />
       {postsElements}
     </section>
