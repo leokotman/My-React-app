@@ -21,6 +21,7 @@ let store = {
         {id: 2, message: "How are you?"},
         {id: 3, message: "Let's meet tomorrow, bro"},
       ],
+      newMessage: "",
     },
     sidebar: {
       friends: [
@@ -41,33 +42,53 @@ let store = {
   subscribe(observer) {
     this._rerenderEntireTree = observer;
   },
-  
+
   dispatch(action) {
     //{type: 'METHOD-NAME'}
-    if (action.type === "ADD-POST") {
+    if (action.type === ADD_POST) {
       let newPost = {
         id: this._state.profilePage.posts.length,
         message: this._state.profilePage.newText,
         likes: 0,
-        views: 0,
+        views: 0
       };
       this._state.profilePage.posts.push(newPost);
       this._state.profilePage.newText = ""; //обнулили окно ввода теперь здесь в BLL
       this._rerenderEntireTree(this._state);
-    } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+    } else if (action.type === UPDATE_NEW_POST_TEXT) {
       this._state.profilePage.newText = action.newText;
       this._rerenderEntireTree(this._state);
+    } else if (action.type === UPDATE_NEW_MESSAGE) {
+      this._state.dialogsPage.newMessage = action.newMessage;
+      this._rerenderEntireTree(this._state);
+    } else if (action.type === SEND_MESSAGE)  {
+      let newMessage = {
+        id: this._state.dialogsPage.messages.length,
+        message: this._state.dialogsPage.newMessage
+      };
+      this._state.dialogsPage.messages.push(newMessage);
+      this._state.dialogsPage.newMessage = "";
+      this._rerenderEntireTree(this._state);
     }
-  }
+  },
 };
 
 const ADD_POST = "ADD-POST";
 const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
 
+const UPDATE_NEW_MESSAGE = "UPDATE-NEW-MESSAGE";
+const SEND_MESSAGE = "SEND-MESSAGE";
+
 export const addPostActionCreator = () => ({type: ADD_POST});
 export const updateNewPostTextActionCreator = (text) => ({
   type: UPDATE_NEW_POST_TEXT,
   newText: text,
+});
+
+export const sendMessageActionCreator = () => ({type: SEND_MESSAGE});
+export const updateNewMessageActionCreator = (message) => ({
+  type: UPDATE_NEW_MESSAGE,
+  newMessage: message,
 });
 
 window.store = store;

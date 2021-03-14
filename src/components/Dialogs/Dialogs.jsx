@@ -22,7 +22,10 @@ function Dialogs(props) {
       <section className={s.currentDialog}>
         Current dialog
         {messagesElements}
-        <SendMessage />
+        <SendMessage
+          dispatch={props.dispatch}
+          newMessage={props.dialogsPage.newMessage}
+        />
       </section>
     </div>
   );
