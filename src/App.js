@@ -10,23 +10,29 @@ import Settings from "./components/Settings/Settings";
 import Sidebar from "./components/Sidebar/Sidebar";
 
 function App(props) {
+  debugger;
   return (
     <BrowserRouter>
       <div className="App">
         <Header />
-        <Sidebar state={props.state.sidebar} />
+        <Sidebar sidebar={props.state.sidebar} />
         <div className="Main">
           <Route
-            render={() => 
-            <Profile 
-              state={props.state.profilePage} 
-              addPost={props.addPost}/>}
-            exact
+            render={() => (
+              <Profile
+                profilePage={props.state.profilePage}
+                dispatch={props.dispatch}
+              />
+            )}
             path="/profile"
           />
           <Route
-            render={() => 
-            <Dialogs state={props.state.dialogsPage} />}
+            render={() => (
+              <Dialogs
+                dialogsPage={props.state.dialogsPage}
+                dispatch={props.dispatch}
+              />
+            )}
             path="/dialogs"
           />
 

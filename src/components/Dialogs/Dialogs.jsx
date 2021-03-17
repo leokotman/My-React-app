@@ -6,10 +6,10 @@ import SendMessage from "./SendMessage/SendMessage";
 
 function Dialogs(props) {
   //из данных делаем разметку с помощью метода .map
-  let dialogsElements = props.state.dialogs.map((dialog) => (
+  let dialogsElements = props.dialogsPage.dialogs.map((dialog) => (
     <Dialog name={dialog.name} id={dialog.id} />
   ));
-  let messagesElements = props.state.messages.map((m) => (
+  let messagesElements = props.dialogsPage.messages.map((m) => (
     <OpenDialog message={m.message} />
   ));
 
@@ -22,7 +22,10 @@ function Dialogs(props) {
       <section className={s.currentDialog}>
         Current dialog
         {messagesElements}
-        <SendMessage />
+        <SendMessage
+          dispatch={props.dispatch}
+          newMessage={props.dialogsPage.newMessage}
+        />
       </section>
     </div>
   );
