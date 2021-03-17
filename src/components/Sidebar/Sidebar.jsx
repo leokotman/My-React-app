@@ -4,6 +4,7 @@ import Friends from "./Friends/Friends";
 import Nav from "./Navbar/Nav";
 
 function Sidebar(props) {
+  debugger;
   let friendsElements = props.sidebar.friends.map((friend) => (
     <Friends name={friend.name} id={friend.id} img={friend.img} />
   ));

@@ -3,7 +3,7 @@ import s from "./CreatePost.module.css";
 import {
   addPostActionCreator,
   updateNewPostTextActionCreator,
-} from "../../../../redux/state";
+} from "../../../../redux/profile-reducer";
 
 function CreatePost(props) {
   let newPostText = React.createRef();

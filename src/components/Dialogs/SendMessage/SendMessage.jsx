@@ -1,6 +1,9 @@
 import React from "react";
 import s from "./SendMessage.module.css";
-import {sendMessageActionCreator, updateNewMessageActionCreator} from "../../../redux/state";
+import {
+  sendMessageActionCreator,
+  updateNewMessageActionCreator,
+} from "../../../redux/dialogs-reducer";
 
 function SendMessage(props) {
   let newMessage = React.createRef();
