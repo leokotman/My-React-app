@@ -3,11 +3,11 @@ import s from "./Posts.module.css";
 import Post from "./Post/Post";
 import CreatePostContainer from "./Post/CreatePost-container";
 
-function Posts(props) {
+function PostsContainer(props) {
   let postsElements = props.posts.map((p) => (
     <Post message={p.message} likes={p.likes} views={p.views} />
   ));
-  
+
   return (
     <section className={s.posts}>
       <h2>Posts</h2>
@@ -17,4 +17,4 @@ function Posts(props) {
   );
 }
 
-export default Posts;
+export default PostsContainer;
