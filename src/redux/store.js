@@ -1,7 +1,6 @@
 import dialogsReducer from "./dialogs-reducer";
 import profileReducer from "./profile-reducer";
 
-debugger;
 let store = {
   _state: {
     profilePage: {
@@ -41,7 +40,6 @@ let store = {
     console.log("state is changed");
   },
   getState() {
-    debugger;
     return this._state;
   },
   subscribe(observer) {
