@@ -4,7 +4,6 @@ import ProfileInfo from "./Profile_info/ProfileInfo";
 import PostsContainer from "./Posts/Posts-container";
 
 function Profile(props) {
-  debugger;
   return (
     <main className={s.profile}>
       Profile
@@ -15,6 +14,7 @@ function Profile(props) {
         dispatch={props.dispatch}
       />
     </main>
+
   );
 }
 

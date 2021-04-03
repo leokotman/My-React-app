@@ -10,7 +10,6 @@ import Settings from "./components/Settings/Settings";
 import Sidebar from "./components/Sidebar/Sidebar";
 
 function App(props) {
-  debugger;
   return (
     <BrowserRouter>
       <div className="App">
